@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>P A R A B E N S</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+  body {
+    background-image: url(imagens/fogos.avif);
+    overflow: hidden;
+    margin: 0px;
+    border: 10px solid black;
+    font-family: "Tilt Neon", sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    position: relative;
+  }
+
+  .box {
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    outline: 5px solid #ff0000;
+    transition: outline 9s ease 0s;
+    border-radius: 100%;
+  }
+
+  .box:hover {
+    outline: 100vw solid #ffff00;
+
+  }
+
+  .texto {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .embranco {
+    
+    color: white;
+    text-align: center;
+    text-shadow:
+      1px 1px 2px rgb(2, 2, 2),
+      0 0 1em blue,
+      0 0 0.2em blue;
+  }
+
+  .img1 {
+    width: 50%;
+  }
+
+  .fogos {
+    background-image: url(imagens/fogos2.gif);
+  }
+
+  .pingu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(imagens/penguin1.gif);
+    background-position: 50% 75%;
+    background-repeat: repeat-x;
+    animation: pingan 20s linear infinite;
+    
+  }
+
+  @keyframes pingan {
+  from {
+	  background-position-x:341px;
+  }
+  to {
+	   background-position-x:-341px;
+	  }
+ }
+
+</style>
+
+<body>
+  <div class="fogos">
+    <div class="pingu">
+      <h2 class="embranco"><br>ACERTOU! (^◡^)<br>Muitas Felicidades, Dinheiro, Saúde, Dinheiro, Presentes, Dinheiro e Pombos! >:D
+      </h2>
+
+      <div class="container">
+
+
+        <div class="box">
+          <h1 class="texto">
+            PARABÉNS<br>
+            <img class="img1" src="imagens/pombo.gif"><br>
+            FELIZ ANIVERSÁRIO!
+          </h1>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

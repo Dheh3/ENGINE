@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>D E A D . . .</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="imagens/luz.gif">
+
+
+    <style>
+        @keyframes blink {
+
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+
+        }
+
+        .div1 {
+            position: relative;
+            perspective: 220px;
+            margin-top: 20px;
+            width: 20%;
+            animation: blink 10s ease 0s infinite normal forwards;
+        }
+
+        .div2 {
+            padding: 5px;
+            position: absolute;
+            border: 1px solid;
+            background-color: black;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">!ALERT!<br><br>DEATH_REPORT<br>DO NOT<br>SHARE<br><br>
+            <br>[...]<br>
+            <samp>
+                DEAD [03]<br>
+                <br>
+                REPORTED BY:<br>
+                [ USER_2210 ]<br>
+                BREEDS [02, 03, 05]<br>
+                <br>
+                REPORT:<br>
+                Three (3) subjects are dead. The cause of death may be associated with: [OVERHEAT], [OVERHEAT], [LOW
+                OXIGEN]<br>
+                <br>[DO NOT SHARE]
+                <br>[HIDDEN]
+                <br>[. . .]
+                <br>[NO MORE DATA]
+
+            </samp>
+        </div>
+    </div>
+
+</body>

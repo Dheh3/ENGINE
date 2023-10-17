@@ -1,0 +1,154 @@
+body {
+    background-color: black;
+    padding: 20px;
+}
+
+
+
+#text {
+    color: red;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    padding-right: 8px;
+    animation: typing 2s steps(40, end);
+}
+
+#next-button {
+    color: red;
+    border: red 2px solid;
+    background-color: black;
+    padding: 5px;
+}
+
+#next-button:hover {
+    color: rgb(151, 2, 2);
+    border: rgb(151, 2, 2) 2px solid;
+    background-color: rgb(39, 0, 0);
+    padding: 5px;
+}
+
+
+#text2 {
+    color: red;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    padding-right: 8px;
+    animation: typing 2s steps(40, end);
+}
+
+#next-button2 {
+    color: red;
+    border: red 2px solid;
+    background-color: black;
+    padding: 5px;
+}
+
+#next-button2:hover {
+    color: rgb(151, 2, 2);
+    border: rgb(151, 2, 2) 2px solid;
+    background-color: rgb(39, 0, 0);
+    padding: 5px;
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/*---------------------------------------------------------*/
+.div1 {
+    position: relative;
+    perspective: 120px;
+    margin-top: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    animation: div1 5s ease 0s infinite normal forwards;
+    animation: div1 0.1s ease 0s infinite normal none;
+}
+
+.div2 {
+    color: red;
+    padding: 5px;
+    position: absolute;
+    border: 1px solid;
+    /*transform: rotateX(0deg) rotateY(20deg);
+    transform-style: preserve-3d;*/
+}
+
+.div2:hover{
+    transform: rotateX(0deg) rotateY(27deg);
+    transform-style: preserve-3d;
+}
+
+
+@keyframes div1 {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+@keyframes div1 {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-2px, -2px);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	30% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	50% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, -2px);
+	}
+
+	70% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	90% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}

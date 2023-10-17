@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>:)</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="imagens/luz.gif">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+
+        .div1 {
+            position: relative;
+            perspective: 390px;
+            margin-top: 10px;
+        }
+
+        .div2 {
+            filter: drop-shadow(0px 100px 16px #707070);
+            padding: 5px;
+            color: white;
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            border: 1px solid;
+            transform: rotateX(40deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            background-color: rgba(136, 136, 136, 0.062);
+        }
+
+        .div3 {
+            width: 100%;
+        }
+
+        .texto {
+            border: solid 1px black;
+            background-color: rgba(136, 136, 136, 0.062);
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .text {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="div1">
+        <div class="div2">ROOT<br><br>MITIGATION<br><br>
+            <br>INITIATING. . .
+            <samp>
+                [FAIL]
+                <br>
+                [FAIL]
+                <br>
+                [FAIL]<br>
+                [!INFO!{TRACKED}]<br>
+                HI:):<br>
+                g00D DDay//<br>
+                #:)#<br>
+                #Sed scis quid sim?#<br>
+                #Meum nomen...#<br>
+                [Volantem mus...]<br>
+                [I hoc non placet...]<br>
+                [NO MORE DATA]<br>
+
+            </samp><br>
+            <form class="opac1" id="loginForm" action="#">
+                <label for="username">
+                    <p>O QUE EU SOU?</p>
+                </label>
+                <input placeholder=":)" class="text" type="text" id="eu" name="eu" required><br><br>
+
+                <input style="padding-left: 9px;padding-right: 9px;" class="button" type="submit" value=":)">
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        var eu = document.getElementById("eu").value.toUpperCase();
+
+        if (eu === "POMBO") {
+            window.location.href = "HI.html";
+        } else {
+            alert("! ERROU :) !");
+        }
+    });
+</script>
+
+</html>

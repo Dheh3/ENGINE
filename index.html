@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>A L E R T</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel="icon" type="image/x-icon" href="imagens/luz.gif">
+
+</head>
+
+<body>
+    <div class="dark">
+        <div class="teste">
+            <img src="imagens/EaDO5I.gif" class="img1">
+        </div>
+        <div>
+            <ul id="frases-lista"></ul>
+        </div>
+
+
+
+
+        <div class="pisca">
+            <h1 id="id1">ERROR</h1>
+        </div>
+        <div class="opac2">
+            <hr>
+            <p class="blue">01000001 01000100 01001101 </p>
+        </div>
+        <div class="opac1">
+
+
+
+            <form class="opac1" id="loginForm" action="#">
+                <label for="username">
+                    <p>USER:</p>
+                </label>
+                <input class="text" type="text" id="username" name="username" required><br><br>
+                <label for="password">
+                    <p>PASSWORD:</p>
+                </label>
+                <input class="text" type="password" id="password" name="password" required><br><br>
+                <input class="button" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<!------------------>
+
+
+<script>
+
+    //-------------------------------------------
+    
+    var frases = [
+        "ALERT!",
+        "CRITICAL ERROR",
+        "SUBJECT_CODE: UElHRU9O",
+        "STATUS:",
+        "[...]",
+        "ACTIVE",
+        "BASE:64"
+
+    ];
+
+    var indiceAtual = 0; 
+
+    function exibirProximaFrase() {
+        var lista = document.getElementById("frases-lista");
+        var novaFrase = document.createElement("li");
+        novaFrase.textContent = frases[indiceAtual];
+        lista.appendChild(novaFrase);
+
+        indiceAtual = (indiceAtual + 1) % frases.length; 
+    }
+
+    
+    exibirProximaFrase();
+    setInterval(exibirProximaFrase, 3000); 
+
+    //--------------LOGIN--------------------------
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        
+        var username = document.getElementById("username").value.toUpperCase();
+        var password = document.getElementById("password").value.toUpperCase();
+
+        
+        if (username === "ADM" && password === "ADM") {
+            
+            window.location.href = "PHASE1.html";
+        } else {
+            alert("!INCORRECT PASSWORD!");
+        }
+    });
+</script>
+
+
+</html>

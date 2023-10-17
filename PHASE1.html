@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>E N G I N E</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='PHASE1.css'>
+    <link rel="icon" type="image/x-icon" href="imagens/luz.gif">
+
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">ENCRYPTED:<br>[...]<br>THE ENGINES <br>[D022]<br>[M010]<br>ARE OUT OF SERVICE<br>
+            <br>[...]<br>
+            <samp>
+                FILE COULD NOT BEEN FOUND<br>
+                <br>
+                IN EMERGENCY CASE<br> CHANGE<br> PROTOCOL DEFAULT NAME<br> [/PHASE1]<br><br> TO<br><br> 
+                [/PHASE2]<br>
+                <br>
+
+
+
+            </samp>
+        </div>
+    </div>
+    <div id="text-box">
+        <p id="text"></p>
+    </div>
+    <button id="next-button">NEXT</button>
+
+
+
+    <!--*************-->
+    <script>
+        const textElement = document.getElementById("text");
+        const nextButton = document.getElementById("next-button");
+
+        const texts = [
+            "PRIVATE INFO [. .  .]",
+            "DO NOT SHARE [...]",
+            "DOMAIN: [ EUKARYOTA ]",
+            "PHYLUM: [ CHORDATA ]",
+            "CLASS: [ HIDDEN ]",
+            "ORDER: [ HIDDEN ]",
+            "BREED [001]: [ FAILURE ]",
+            "BREED [002]: [ DEAD ]",
+            "BREED [003]: [ FAILURE ]",
+            "BREED [004]: [ DEAD ]",
+            "BREED [005]: [ DEAD ]",
+            "BREED [006]: [ ACTIVE ]",
+            "[...]",
+            "echo 'USE PERSONAL PASSWORD:'",
+            "[. . .]",
+            "[. . . LOADED]",
+            ". . . . . .  AUTHENTIFIED . . . . . PROCEED TO NEXT PHASE"
+
+        ];
+
+        let index = 0;
+
+        function typeText() {
+            if (index < texts.length) {
+                const currentText = texts[index];
+                let textIndex = 0;
+                textElement.textContent = "";
+
+                function addNextCharacter() {
+                    if (textIndex < currentText.length) {
+                        textElement.textContent += currentText.charAt(textIndex);
+                        textIndex++;
+                        setTimeout(addNextCharacter, 200); 
+                    } else {
+                        index++;
+                        nextButton.style.display = index < texts.length ? "block" : "none";
+                    }
+                }
+
+                addNextCharacter();
+            }
+        }
+
+        nextButton.addEventListener("click", typeText);
+
+        
+        typeText();
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@media screen and (max-width:600px) {
+    .img1 {
+      width: 100%;
+    }
+    .h1{
+        font-size: large;
+    }
+}
+*{
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 8px;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+a{
+    text-decoration: none;
+}
+a:link {
+	color:red;
+	}
+	
+a:visited {
+	color:red;
+	}
+	
+a:hover {
+	color:red;
+
+	}
+	
+a:active {
+	color:red;
+}
+
+body{
+    background-color: black;
+}
+#frases-lista{
+    color: red;
+}
+
+
+img{
+    image-rendering: pixelated;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    padding-top: 50px;
+    width: 10%;
+}
+.img{
+    animation: shake 1s ease 0s infinite normal both;
+
+}
+p{
+    color: red;
+    font-size: x-large;
+    
+}
+.blue{
+    color: red;
+}
+.blue:hover{
+    color: rgb(110, 0, 0);
+}
+h1{
+    color: red;
+    font-size: 70px;
+}
+h2{
+    color: red;
+}
+body{
+    text-align: center;
+}
+#id1{
+    padding-top: 50px;
+}
+hr{
+    width: 133px;
+    border-style: solid;
+    border-color: red;
+    display: inline-block;
+    animation: add 3s linear ;
+    margin-bottom: 10px;
+}
+.dark{
+  background-color: black;
+  height: 100vh;
+
+}
+input{
+    border: none;
+}
+.opac1{
+    padding-top: 50px;
+    opacity: 0;
+    animation: opacity 3s ease-in forwards;
+    animation-delay: 2s;
+}
+.opac2{
+    opacity: 0;
+    animation: opacity2 3s ease-in forwards;
+    animation-delay: 1.3s;
+}
+@keyframes opacity {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes opacity2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.pisca{
+    animation: pisca 1s ease 0s infinite normal forwards;
+}
+@keyframes pisca {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+   
+
+
+.button {
+	color:red;
+	background-color:black;
+	width:100px;
+	cursor:pointer;
+	padding-left:12px;
+	padding-top:2px;
+	padding-bottom:2px;
+	letter-spacing:8px;
+	transition: color 0.5s ease-out, border-color 0.5s ease-out;
+	text-align:center;
+	border-radius:20px;
+	border-style: solid;
+    border-width: 2px;
+	border-color:white;
+	line-height:16px;
+	margin-bottom:100px;
+}
+
+
+.button:hover {
+	color:red;
+	border-color:red;
+}
+.text {	
+	background-color:red;
+	height:18px;
+	text-align:center;
+	margin-bottom:12px;
+	transition: background-color 0.5s ease-out;
+	width:170px;
+}
+
+.teste{
+    animation: shake 1s ease 0s infinite normal both;
+
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-5px, -5px);
+	}
+
+	20% {
+		transform: translate(5px, -5px);
+	}
+
+	30% {
+		transform: translate(-5px, 5px);
+	}
+
+	40% {
+		transform: translate(5px, 5px);
+	}
+
+	50% {
+		transform: translate(-5px, -5px);
+	}
+
+	60% {
+		transform: translate(5px, -5px);
+	}
+
+	70% {
+		transform: translate(-5px, 5px);
+	}
+
+	80% {
+		transform: translate(-5px, -5px);
+	}
+
+	90% {
+		transform: translate(5px, -5px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}

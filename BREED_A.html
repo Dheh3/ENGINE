@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>? ? ? ? . . .</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="imagens/luz.gif">
+
+
+
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .div1 {
+        position: relative;
+        perspective: 339px;
+        margin-top: 10%;
+    }
+
+    .div2 {
+        padding: 5px;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        border: 1px solid;
+        transform: rotateX(40deg) rotateY(0deg);
+        transform-style: preserve-3d;
+        background-color: rgba(136, 136, 136, 0.062);
+    }
+
+    .div3 {
+        width: 100%;
+    }
+    .texto{
+        border: solid 1px black;
+        background-color: rgba(136, 136, 136, 0.062);
+        padding: 10px;
+        width: fit-content;
+    }
+</style>
+
+<body>
+
+    <div class="div3">
+        <div class="texto">CURRENT HOUR
+            <div id="horario"></div>
+        </div>
+
+        <div class="div1">
+            <div class="div2">
+                <form class="opac1" id="loginForm" action="#">
+                    <label for="username">
+                        <p><b>ENTER [ D ]</b><br><b>ENGINE:</b></p>
+                    </label>
+                    <input style="text-align: center;" class="text" type="text" id="code" name="code"
+                        placeholder="[D000]" maxlength="4" required><br><br>
+                    <label for="password">
+                        <p><b>ENTER BREED</b><br><b>NUMBER:</b></p>
+                    </label>
+                    <input style="text-align: center;" class="text" type="password" id="number" name="breed"
+                        placeholder="[000]" maxlength="3" required><br><br>
+                    <input class="button" type="submit" value="SUBMIT">
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function atualizarHorario() {
+        var agora = new Date();
+        var hora = agora.getHours();
+        var minuto = agora.getMinutes();
+        var segundo = agora.getSeconds();
+
+        hora = hora < 10 ? "0" + hora : hora;
+        minuto = minuto < 10 ? "0" + minuto : minuto;
+        segundo = segundo < 10 ? "0" + segundo : segundo;
+
+        document.getElementById("horario").innerHTML = hora + ":" + minuto + ":" + segundo;
+    }
+
+    setInterval(atualizarHorario, 1000);
+
+    atualizarHorario();
+    //-------------------------
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        var code = document.getElementById("code").value;
+        var number = document.getElementById("number").value;
+
+        if (code === "D022" && number === "006") {
+            window.location.href = "DO_NOT_SHARE.html";
+        } else {
+            alert("!NOT FOUND!");
+        }
+    });
+</script>
+
+</html>
